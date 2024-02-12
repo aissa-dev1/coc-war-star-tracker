@@ -60,6 +60,7 @@ function Home() {
   return (
     <main>
       <MainNav />
+
       <header className="container flex flex-col gap-6 p-4 mx-auto sm:p-6">
         <ClashofClansBanner />
         <Leaderboard />
