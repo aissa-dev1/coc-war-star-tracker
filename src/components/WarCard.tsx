@@ -48,23 +48,6 @@ function WarCard({ war }: WarCardProps) {
     </div>
   );
 
-  // Grrrrrrr
-  // wach sra
-  // it does not look good
-  // here we go again
-  // we have a problem with star
-  //
-  // what if the stars are double number, like 12
-  // aha, my mistake I fixed the width
-  // its okay it can be adjusted by adding to the width of the star
-  // look at this
-  // no no its okay to have a fixed width
-  // ok
-  // Looks cool
-  // push the code and let me see what you cooked
-  // wait a sec
-  // OK
-
   // code won't reach here!
   return (
     <div className="flex flex-row justify-between p-2 text-black bg-white border rounded">
