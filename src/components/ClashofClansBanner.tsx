@@ -1,4 +1,4 @@
-import cocBanner from "/public/images/coc.webp";
+import cocBanner from "/images/coc.webp";
 
 function ClashofClansBanner() {
   return (

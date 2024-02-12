@@ -15,7 +15,7 @@ function LeaderboardCard({ ranking, playerState }: LeaderboardCardProps) {
 
         <div className="flex items-center gap-2">
           <div className="relative w-fit h-fit">
-            <Star className="w-9 h-9" />
+            <Star className="w-10 h-10" />
 
             <p className="absolute text-sm font-bold -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
               {playerState.totalStars}
@@ -23,16 +23,12 @@ function LeaderboardCard({ ranking, playerState }: LeaderboardCardProps) {
           </div>
 
           <div
-            className={classNames(
-              "flex justify-center items-center w-6 h-6 text-white",
-              {
-                "bg-yellow-300": ranking === 1,
-                "bg-slate-400": ranking === 2,
-                "bg-yellow-700": ranking === 3,
-                "bg-purple-700":
-                  ranking !== 1 && ranking !== 2 && ranking !== 3,
-              }
-            )}
+            className={classNames("flex justify-center items-center w-8 h-8 text-white rounded-full", {
+              "bg-yellow-300": ranking === 1,
+              "bg-slate-400": ranking === 2,
+              "bg-yellow-700": ranking === 3,
+              "bg-purple-700": ranking !== 1 && ranking !== 2 && ranking !== 3,
+            })}
           >
             {ranking}
           </div>
@@ -40,12 +36,12 @@ function LeaderboardCard({ ranking, playerState }: LeaderboardCardProps) {
       </div>
 
       <div className="grid grid-cols-2 gap-4">
-        <div className="flex items-center justify-center p-1.5 text-sm font-bold text-white bg-red-400 rounded">
-          {playerState.destructionPercentageAverage}%
+        <div className="flex items-center justify-center gap-1 p-1.5 text-sm font-bold text-white bg-red-400 rounded">
+          <span>التدمير</span> <span>{playerState.destructionPercentageAverage}%</span>
         </div>
 
-        <div className="flex items-center justify-center p-1.5 text-sm font-bold text-white bg-blue-400 rounded">
-          {playerState.attackTimeAverage}s
+        <div className="flex items-center justify-center gap-1 p-1.5 text-sm font-bold text-white bg-blue-400 rounded">
+          <span>الوقت</span> <span>{playerState.attackTimeAverage}s</span>
         </div>
       </div>
     </div>
