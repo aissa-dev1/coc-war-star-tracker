@@ -25,13 +25,33 @@ const leaderboard: LeaderBoardPlayerState[] = [
   },
   {
     id: "#GHFYSGFDDSS",
-    name: "NOT_AISSA",
-    totalStars: 2,
+    name: "الحبشة",
+    totalStars: 0,
+    totalDestruction: 0,
+    destructionPercentageAverage: 0,
+    totalAttackTime: 0,
+    attackTimeAverage: 0,
+    totalAttacksCount: 0,
+  },
+  {
+    id: "#qsdqsdqsdqsd",
+    name: "حمودا",
+    totalStars: 1,
     totalDestruction: 80,
     destructionPercentageAverage: 80,
-    totalAttackTime: 150,
-    attackTimeAverage: 150,
+    totalAttackTime: 120,
+    attackTimeAverage: 120,
     totalAttacksCount: 1,
+  },
+  {
+    id: "#GHzzqsdFYSdGFDDSS",
+    name: "جحفل",
+    totalStars: 0,
+    totalDestruction: 0,
+    destructionPercentageAverage: 0,
+    totalAttackTime: 0,
+    attackTimeAverage: 0,
+    totalAttacksCount: 0,
   },
 ];
 
@@ -42,11 +62,7 @@ function Leaderboard() {
 
       <div className="flex gap-2 overflow-x-auto max-w-screen">
         {leaderboard.map((playerState, index) => (
-          <LeaderboardCard
-            key={playerState.id}
-            ranking={index + 1}
-            playerState={playerState}
-          />
+          <LeaderboardCard key={playerState.id} ranking={index + 1} playerState={playerState} />
         ))}
       </div>
     </section>
