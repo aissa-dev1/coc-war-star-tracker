@@ -58,15 +58,11 @@ const leaderboard: LeaderBoardPlayerState[] = [
 function Leaderboard() {
   return (
     <section className="flex flex-col gap-4 sm:gap-6">
-      <SectionTitle name="المتصدرين" />
+      <SectionTitle name="قائمة المتصدرين" />
 
       <div className="flex gap-2 overflow-x-auto max-w-screen no-scrollbar">
         {leaderboard.map((playerState, index) => (
-          <LeaderboardCard
-            key={playerState.id}
-            ranking={index + 1}
-            playerState={playerState}
-          />
+          <LeaderboardCard key={playerState.id} ranking={index + 1} playerState={playerState} />
         ))}
       </div>
     </section>

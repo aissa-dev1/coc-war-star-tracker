@@ -1,8 +1,8 @@
 import classNames from "classnames";
-import Star from "../icons/Star";
 import { LeaderBoardPlayerState } from "../../types";
 import { formatSeconds } from "../../utils/format-seconds";
 import Dot from "../Dot";
+import EarnedStars from "./EarnedStars";
 
 interface LeaderboardCardProps {
   ranking: number;
@@ -27,13 +27,7 @@ function LeaderboardCard({ ranking, playerState }: LeaderboardCardProps) {
           <p className="text-lg font-bold">{playerState.name}</p>
         </div>
 
-        <div className="relative w-fit h-fit">
-          <Star className="w-14 h-14" />
-
-          <p className="absolute font-bold -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
-            {playerState.totalStars}
-          </p>
-        </div>
+        <EarnedStars value={playerState.totalStars} />
       </div>
 
       <div className="grid grid-cols-2 gap-4">
