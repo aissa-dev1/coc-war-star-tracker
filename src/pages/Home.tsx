@@ -6,7 +6,7 @@ import WarCardsMenu from "../components/WarCardsMenu";
 
 function Home() {
   return (
-    <main>
+    <main className="pb-footer">
       <MainNav />
 
       <header className="container flex flex-col gap-6 p-4 mx-auto sm:p-6">

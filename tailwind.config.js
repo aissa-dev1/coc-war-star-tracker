@@ -20,6 +20,7 @@ export default {
       },
       spacing: {
         nav: "64px",
+        footer: "28px",
       },
     },
   },
