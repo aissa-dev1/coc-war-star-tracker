@@ -1,43 +1,158 @@
+import { PlayerLeaderBoardState } from "../types";
 import LeaderboardCard from "./helpers/LeaderboardCard";
 import SectionTitle from "./helpers/SectionTitle";
 
-const leaderboardData: { name: string; stars: number }[] = [
+const leaderboard: PlayerLeaderBoardState[] = [
   {
-    name: "Youcef dr",
-    stars: 6,
-  },
-  {
-    name: "Not Aissa",
-    stars: 9,
-  },
-  {
+    id: "#GHFYK2JDSDD",
     name: "CosmicExplorer",
-    stars: 7,
+    totalStars: 3,
+    totalDestruction: 100,
+    totalAttackTime: 90,
   },
   {
-    name: "الفنك الجزائري",
-    stars: 10,
+    id: "#DHFGDFGGDD",
+    name: "Wassim",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 120,
   },
   {
-    name: "التنين المدمر",
-    stars: 8,
+    id: "#GHFYSGFDDSS",
+    name: "NOT_AISSA",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 150,
+  },
+  {
+    id: "#GHFYK2JDSDD",
+    name: "CosmicExplorer",
+    totalStars: 3,
+    totalDestruction: 100,
+    totalAttackTime: 90,
+  },
+  {
+    id: "#DHFGDFGGDD",
+    name: "Wassim",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 120,
+  },
+  {
+    id: "#GHFYSGFDDSS",
+    name: "NOT_AISSA",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 150,
+  },
+  {
+    id: "#GHFYK2JDSDD",
+    name: "CosmicExplorer",
+    totalStars: 3,
+    totalDestruction: 100,
+    totalAttackTime: 90,
+  },
+  {
+    id: "#DHFGDFGGDD",
+    name: "Wassim",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 120,
+  },
+  {
+    id: "#GHFYSGFDDSS",
+    name: "NOT_AISSA",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 150,
+  },
+  {
+    id: "#GHFYK2JDSDD",
+    name: "CosmicExplorer",
+    totalStars: 3,
+    totalDestruction: 100,
+    totalAttackTime: 90,
+  },
+  {
+    id: "#DHFGDFGGDD",
+    name: "Wassim",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 120,
+  },
+  {
+    id: "#GHFYSGFDDSS",
+    name: "NOT_AISSA",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 150,
+  },
+  {
+    id: "#GHFYK2JDSDD",
+    name: "CosmicExplorer",
+    totalStars: 3,
+    totalDestruction: 100,
+    totalAttackTime: 90,
+  },
+  {
+    id: "#DHFGDFGGDD",
+    name: "Wassim",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 120,
+  },
+  {
+    id: "#GHFYSGFDDSS",
+    name: "NOT_AISSA",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 150,
+  },
+  {
+    id: "#GHFYK2JDSDD",
+    name: "CosmicExplorer",
+    totalStars: 3,
+    totalDestruction: 100,
+    totalAttackTime: 90,
+  },
+  {
+    id: "#DHFGDFGGDD",
+    name: "Wassim",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 120,
+  },
+  {
+    id: "#GHFYSGFDDSS",
+    name: "NOT_AISSA",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 150,
+  },
+  {
+    id: "#DHFGDFGGDD",
+    name: "Wassim",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 120,
+  },
+  {
+    id: "#GHFYSGFDDSS",
+    name: "NOT_AISSA",
+    totalStars: 2,
+    totalDestruction: 80,
+    totalAttackTime: 150,
   },
 ];
 
-for (let i = 1; i <= 15; i++) {
-  leaderboardData.push({ name: `Hello world ${i}`, stars: 0 });
-}
-
 function Leaderboard() {
-  const sortedLeaderboardData = [...leaderboardData].sort((a, b) => b.stars - a.stars);
-
   return (
-    <section>
+    <section className="flex flex-col gap-2">
       <SectionTitle name="المتصدرين" />
 
-      <div className="flex flex-col gap-2 p-2 mt-1 bg-white">
-        {sortedLeaderboardData.map((card, index) => (
-          <LeaderboardCard key={index} ranking={index + 1} {...card} />
+      <div className="flex flex-row gap-2 overflow-x-auto max-w-screen">
+        {leaderboard.map((player, index) => (
+          <LeaderboardCard key={player.id} ranking={index + 1} {...player} />
         ))}
       </div>
     </section>

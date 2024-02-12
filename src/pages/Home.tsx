@@ -1,10 +1,8 @@
-import CurrentWarStatus from "../components/CurrentWarStatus";
 import Leaderboard from "../components/Leaderboard";
 import MainFooter from "../components/MainFooter";
 import MainNav from "../components/MainNav";
-import WarCard from "../components/WarCard";
 import WelcomeMessage from "../components/WelcomeMessage";
-import { PlayerLeaderBoardState, War } from "../types";
+import { War } from "../types";
 
 const wars: War[] = [
   {
@@ -57,58 +55,19 @@ const wars: War[] = [
     totalDestruction: 200,
   },
 ];
-const leaderboard: PlayerLeaderBoardState[] = [
-  {
-    id: "#GHFYK2JDSDD",
-    name: "CosmicExplorer",
-    totalStars: 3,
-    totalDestruction: 100,
-    totalAttackTime: 90,
-  },
-  {
-    id: "#DHFGDFGGDD",
-    name: "Wassim",
-    totalStars: 2,
-    totalDestruction: 80,
-    totalAttackTime: 120,
-  },
-  {
-    id: "#GHFYSGFDDSS",
-    name: "NOT_AISSA",
-    totalStars: 2,
-    totalDestruction: 80,
-    totalAttackTime: 150,
-  },
-];
 
 function Home() {
   return (
     <main>
       <MainNav />
 
-      {/* <header className="container mx-auto mt-0 sm:mt-1">
+      <header className="container py-0.5 px-2 mx-auto text-white bg-purple-700 mt-1">
         <WelcomeMessage />
       </header>
 
-      <header className="container flex flex-col gap-2 p-2 mx-auto mt-1 text-white bg-purple-700 overflow-y-auto max-h-[calc(100vh-150px)] sm:max-h-[calc(100vh-160px)]">
-        <CurrentWarStatus />
-
+      <header className="container py-0.5 px-2 mx-auto text-white bg-purple-700 mt-1">
         <Leaderboard />
-      </header> */}
-
-      <div className="flex gap-3 p-6">
-        {leaderboard.map((playerState) => (
-          <div key={playerState.id} className="bg-lime-500">
-            {playerState.name}
-          </div>
-        ))}
-      </div>
-
-      <div className="p-6">
-        {wars.map((war) => (
-          <WarCard key={war.id} war={war} />
-        ))}
-      </div>
+      </header>
 
       <MainFooter />
     </main>

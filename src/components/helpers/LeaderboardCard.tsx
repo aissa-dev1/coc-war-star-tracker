@@ -1,27 +1,38 @@
 import classNames from "classnames";
 import { LeaderboardCardProps } from "./types";
+import Star from "../icons/Star";
 
-function LeaderboardCard({ ranking, name, stars }: LeaderboardCardProps) {
+function LeaderboardCard({ ranking, name, totalStars, totalDestruction, totalAttackTime }: LeaderboardCardProps) {
   return (
-    <div className="flex flex-row justify-between items-center bg-[#f5f5f5] text-black py-4 px-2 rounded">
+    <div className="flex flex-col gap-1 p-2 text-black bg-white rounded !w-96">
       <div className="flex flex-row items-center gap-2">
-        <p
+        <div
           className={classNames("flex justify-center items-center w-6 h-6 text-white", {
             "bg-yellow-300": ranking === 1,
             "bg-slate-400": ranking === 2,
-            "bg-yellow-800": ranking === 3,
+            "bg-yellow-700": ranking === 3,
             "bg-purple-700": ranking !== 1 && ranking !== 2 && ranking !== 3,
           })}
         >
           {ranking}
-        </p>
+        </div>
 
-        <p className="font-bold">{name}</p>
+        <p className="text-sm font-bold">{name}</p>
       </div>
 
-      <p className="text-sm font-bold font-cairo">
-        {stars} {stars > 1 ? "نجوم" : "نجمة"}
-      </p>
+      <div className="flex flex-col gap-2">
+        <div className="relative w-fit h-fit">
+          <Star />
+
+          <p className="absolute text-sm font-semibold -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
+            {totalStars}
+          </p>
+        </div>
+
+        <div className="px-2 py-1 text-white bg-red-400">{totalDestruction}%</div>
+
+        <div className="px-2 py-1 text-white bg-blue-400">{totalAttackTime}s</div>
+      </div>
     </div>
   );
 }

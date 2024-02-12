@@ -13,13 +13,6 @@ function MainNav() {
         <Link className="py-0.5 px-2 text-sm font-bold font-cairo text-black bg-white rounded cursor-pointer" to="/">
           الصفحة الرئيسية
         </Link>
-
-        <Link
-          className="py-0.5 px-2 text-sm font-bold font-cairo text-black bg-white rounded cursor-pointer"
-          to="/war-logs"
-        >
-          الحروب السابقة
-        </Link>
       </section>
 
       <section className="sm:hidden">

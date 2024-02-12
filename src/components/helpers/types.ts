@@ -1,16 +1,9 @@
+import { PlayerLeaderBoardState } from "../../types";
+
 export interface SectionTitleProps {
   name: string;
 }
 
-export interface CurrentWarStatusCardProps {
-  myClan?: true;
-  name: string;
-  stars: number;
-  totalDestruction: number;
-}
-
-export interface LeaderboardCardProps {
+export interface LeaderboardCardProps extends Omit<PlayerLeaderBoardState, "id"> {
   ranking: number;
-  name: string;
-  stars: number;
 }
