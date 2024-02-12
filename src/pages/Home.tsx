@@ -1,7 +1,7 @@
 import Leaderboard from "../components/Leaderboard";
 import MainFooter from "../components/MainFooter";
 import MainNav from "../components/MainNav";
-import WelcomeMessage from "../components/WelcomeMessage";
+import ClashofClansBanner from "../components/ClashofClansBanner";
 import { War } from "../types";
 
 const wars: War[] = [
@@ -60,12 +60,8 @@ function Home() {
   return (
     <main>
       <MainNav />
-
-      <header className="container py-0.5 px-2 mx-auto text-white bg-purple-700 mt-1">
-        <WelcomeMessage />
-      </header>
-
-      <header className="container py-0.5 px-2 mx-auto text-white bg-purple-700 mt-1">
+      <header className="container flex flex-col gap-6 p-4 mx-auto sm:p-6">
+        <ClashofClansBanner />
         <Leaderboard />
       </header>
 

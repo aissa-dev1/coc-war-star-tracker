@@ -9,6 +9,18 @@ export default {
       fontFamily: {
         cairo: "'Cairo', sans-serif",
       },
+      container: {
+        screens: {
+          sm: "600px",
+          md: "728px",
+          lg: "984px",
+          xl: "1240px",
+          "2xl": "1280px",
+        },
+      },
+      spacing: {
+        nav: "64px",
+      },
     },
   },
   plugins: [],

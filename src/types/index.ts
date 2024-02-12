@@ -29,10 +29,13 @@ export interface Attack {
   durationSeconds: number;
 }
 
-export interface PlayerLeaderBoardState {
+export interface LeaderBoardPlayerState {
   id: string;
   name: string;
   totalStars: number;
   totalDestruction: number;
+  destructionPercentageAverage: number;
   totalAttackTime: number;
+  attackTimeAverage: number;
+  totalAttacksCount: number;
 }
