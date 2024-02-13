@@ -19,7 +19,7 @@ export default {
         },
       },
       spacing: {
-        nav: "64px",
+        nav: "80px",
         footer: "28px",
       },
     },
